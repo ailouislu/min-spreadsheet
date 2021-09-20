@@ -6,8 +6,7 @@
     let cell;
     let cellText;
     let cellInput;
-
-    let columnLabel = 0;
+    let columnLabel;
 
     //Use the for loop to generate the rows and columns of the Spreadsheet
     for (let i = 0; i <= columns; i++) {
