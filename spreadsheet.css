@@ -16,7 +16,7 @@
   .tableStyles td {
     width: 120px;
     line-height: 30px;
-    font-size: 14px;
+    font-size: 16px;
     font-family: "collapse";
     border: 1px solid #aaa;
     text-align: center;
@@ -37,7 +37,7 @@
     text-align: left;
     border: none;
     outline-style: none;
-    font-size: 14px;
+    font-size: 16px;
     border: 2px solid #fff;
   }
 
