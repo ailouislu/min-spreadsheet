@@ -1,0 +1,90 @@
+
+* {
+    margin: 0;
+    padding: 0;
+  }
+
+  .tableStyles {
+    width: 800px;
+    margin: 20px auto;
+    border: 1px solid #aaa;
+    border-collapse: collapse;
+    vertical-align:top;
+  }
+
+  .tableStyles th,
+  .tableStyles td {
+    width: 120px;
+    line-height: 30px;
+    font-size: 14px;
+    font-family: "collapse";
+    border: 1px solid #aaa;
+    text-align: center;
+    padding: 4px;
+  }
+
+  .tableStyles td {
+    padding: 0;
+    width: 20px;
+  }
+
+  .tableStyles tr.headline {
+    background-color: #379;
+  }
+
+  .tableStyles td input {
+    height: 24px;
+    text-align: left;
+    border: none;
+    outline-style: none;
+    font-size: 14px;
+    border: 2px solid #fff;
+  }
+
+  .tableStyles .alt {
+    border: 2px solid #222;
+  }
+
+
+.btn-group button {
+  background-color: #426fcf;
+  border: none;
+  color: white;
+  padding: 10px 25px;
+  text-align: center;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.btn-group button:not(:last-child) {
+  border-right: none; /* Prevent double borders */
+}
+
+/* Clear floats (clearfix hack) */
+.btn-group:after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/* Add a background color on hover */
+.btn-group button:hover {
+  background-color: #3e8e41;
+}
+}
+
+.btn-group button:not(:last-child) {
+  border-right: none; /* Prevent double borders */
+}
+
+/* Clear floats (clearfix hack) */
+.btn-group:after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/* Add a background color on hover */
+.btn-group button:hover {
+  background-color: #3e8e41;
+}
