@@ -79,7 +79,9 @@
 
     if(inputValue.length == 0) return;
 
-    if(inputValue.trim().indexOf("=") != 0) return;
+    inputValue = inputValue.replaceAll(" ", "");
+
+    if(inputValue.indexOf("=") != 0) return;
 
     inputValue = inputValue.replace("=", "").trim();
 
