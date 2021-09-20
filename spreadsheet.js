@@ -80,9 +80,9 @@
 
     if(inputValue.length == 0) return;
 
-    if(inputValue.indexOf("=") != 0) return;
+    if(inputValue.trim().indexOf("=") != 0) return;
 
-    inputValue = inputValue.substring(1, inputValue.length);
+    inputValue = inputValue.replace("=", "").trim();
 
     //Calculate the sum and difference of 2 cells
     let indexOfPlus = inputValue.indexOf("+");
