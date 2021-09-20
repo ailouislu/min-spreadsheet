@@ -112,8 +112,8 @@
   function sumTwoCells(inputValue){
     let labels = inputValue.split("+");
     
-    let firstCell = document.getElementById(labels[0].toUpperCase());
-    let secondCell = document.getElementById(labels[1].toUpperCase());
+    let firstCell = document.getElementById(labels[0].trim().toUpperCase());
+    let secondCell = document.getElementById(labels[1].trim().toUpperCase());
 
     if(firstCell == null || secondCell == null) return;
     
@@ -126,8 +126,8 @@
   function subtractTwoCells(inputValue){
     let labels = inputValue.split("-");
     
-    let firstCell = document.getElementById(labels[0].toUpperCase());
-    let secondCell = document.getElementById(labels[1].toUpperCase());
+    let firstCell = document.getElementById(labels[0].trim().toUpperCase());
+    let secondCell = document.getElementById(labels[1].trim().toUpperCase());
 
     if(firstCell == null || secondCell == null) return;
     
@@ -139,14 +139,14 @@
 
   //Calculate the sum of all cells in the range
   function sumFunction(inputValue){
-    inputValue = inputValue.toLowerCase().replace("sum(", "").replace(")", "");
+    inputValue = inputValue.toLowerCase().replace("sum", "").replace("(", "").replace(")", "").trim();
 
     let labels = inputValue.split(":");
     
     //Get rid of the number, get cell Labels
     let numbers = /\d+/g;
-    let firstCellLabel = labels[0].replace(numbers, "");
-    let lastCellLabel = labels[1].replace(numbers, "");
+    let firstCellLabel = labels[0].replace(numbers, "").trim();
+    let lastCellLabel = labels[1].replace(numbers, "").trim();
 
     //If two cell labels are not in the same column, stop the operation and return -1 directly
     if(firstCellLabel != lastCellLabel) return -1;
