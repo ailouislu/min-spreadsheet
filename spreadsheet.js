@@ -1,6 +1,8 @@
  
  function createSpreadsheet(columns, rows) {
-    let table = document.getElementsByTagName("table")[0];
+   // get the reference for the body
+    let body = document.getElementsByTagName("body")[0];
+    let table = document.createElement("table");
     let tableBody = document.createElement("tbody");
     let row;
     let cell;
@@ -54,6 +56,10 @@
 
     //Put the <tbody> in the <table>
     table.appendChild(tableBody);
+    // appends <table> into <body>
+    body.appendChild(table);
+    table.setAttribute("id", "table");
+    table.setAttribute("class", "tableStyles");
   }
 
   //Generate the column label for each column based on ASCII
