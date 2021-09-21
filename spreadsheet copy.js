@@ -1,40 +1,4 @@
-
-  var Spreadsheet = (function(){
-
-    function generateSpreadsheet(columns, rows){
-      createSpreadsheet(columns, rows);
-    }
-
-    function spreadsheet(columns, rows){
-        if(this instanceof spreadsheet){
-            this.generateSpreadsheet(columns, rows);
-            
-        }else{
-            return new spreadsheet(columns, rows);
-        }
-    }
-
-    spreadsheet.prototype = {
-        constructor: spreadsheet,
-        generateSpreadsheet: function(columns, rows){
-            createSpreadsheet(columns, rows);
-        }
-    }
-
-    return spreadsheet;
-  })();
-
-  function creatTitle(){
-    let title = "Mini Spreadsheet";
-    let body = document.getElementsByTagName("body")[0];
-    let br = document.createElement("br");
-    let h1 = document.createElement("h1");
-    body.appendChild(h1);
-    h1.setAttribute("title", title);
-    //h1.setAttribute("style", "text-align:left");
-  }
-
-
+ 
  function createSpreadsheet(columns, rows) {
    // get the reference for the body
     let body = document.getElementsByTagName("body")[0];
@@ -281,12 +245,10 @@
 
   //Initialize the page and generate the Spreadsheet
   function initialing() {
-    const columns = 10;
-    const rows = 10;
+    const column = 100;
+    const row = 100;
 
-    var spreadsheet = new Spreadsheet(columns, rows);
-    //person.generateSpreadsheet(11,11);
-    //var spreadsheet = new Spreadsheet(columns, rows);
+    createSpreadsheet(column, row);
   }
 
   window.onload = initialing();
