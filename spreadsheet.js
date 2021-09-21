@@ -281,12 +281,10 @@
 
   //Initialize the page and generate the Spreadsheet
   function initialing() {
-    const columns = 10;
-    const rows = 10;
+    const columns = 100;
+    const rows = 100;
 
     var spreadsheet = new Spreadsheet(columns, rows);
-    //person.generateSpreadsheet(11,11);
-    //var spreadsheet = new Spreadsheet(columns, rows);
   }
 
   window.onload = initialing();
