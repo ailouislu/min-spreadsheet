@@ -38,7 +38,9 @@ var Spreadsheet = (function(){
  function createSpreadsheet(columns, rows) {
    // get the reference for the body
     let body = document.getElementsByTagName("body")[0];
-    //let table = document.createElement("table");
+    let table = document.createElement("table");
+    table.setAttribute("id", "myTable");
+    table.setAttribute("class", "tableStyles");
     let tableBody = document.createElement("tbody");
     let row;
     let cell;
@@ -92,6 +94,9 @@ var Spreadsheet = (function(){
 
     //Put the <tbody> in the <table>
     table.appendChild(tableBody);
+    
+    body.appendChild(table);
+    var myTable = document.getElementById("myTable");
   }
 
   //Generate the column label for each column based on ASCII
@@ -214,11 +219,11 @@ var Spreadsheet = (function(){
   }
 
   let input = document.getElementsByTagName("input");
-  let table = document.getElementById("table");
+  
 
   function changeToBold(){
-    if(table.style.fontWeight != "bold"){
-      document.getElementById("table").style.fontWeight = "bold";
+    if(myTable.style.fontWeight != "bold"){
+      document.getElementById("myTable").style.fontWeight = "bold";
 
       for(let i = 0; i < input.length; i++){
           if(input[i] != null)
@@ -227,7 +232,7 @@ var Spreadsheet = (function(){
       return;
     }
 
-    document.getElementById("table").style.fontWeight = "";
+    document.getElementById("myTable").style.fontWeight = "";
 
     for(let i = 0; i < input.length; i++){
         if(input[i] != null)
@@ -237,8 +242,8 @@ var Spreadsheet = (function(){
   }
 
   function changeToItalics(){
-    if(table.style.fontStyle != "italic"){
-      document.getElementById("table").style.fontStyle = "italic";
+    if(myTable.style.fontStyle != "italic"){
+      document.getElementById("myTable").style.fontStyle = "italic";
 
       for(let i = 0; i < input.length; i++){
           if(input[i] != null)
@@ -247,7 +252,7 @@ var Spreadsheet = (function(){
       return;
     }
 
-    document.getElementById("table").style.fontStyle = "";
+    document.getElementById("myTable").style.fontStyle = "";
 
     for(let i = 0; i < input.length; i++){
         if(input[i] != null)
@@ -256,8 +261,8 @@ var Spreadsheet = (function(){
   }
 
   function changeToUnderline(){
-    if(table.style.textDecoration != "underline"){
-      document.getElementById("table").style.textDecoration = "underline";
+    if(myTable.style.textDecoration != "underline"){
+      document.getElementById("myTable").style.textDecoration = "underline";
 
       for(let i = 0; i < input.length; i++){
           if(input[i] != null)
@@ -266,7 +271,7 @@ var Spreadsheet = (function(){
       return;
     }
 
-    document.getElementById("table").style.textDecoration = "";
+    document.getElementById("myTable").style.textDecoration = "";
 
     for(let i = 0; i < input.length; i++){
         if(input[i] != null)
