@@ -1,5 +1,5 @@
 
-  var Spreadsheet = (function(){
+var Spreadsheet = (function(){
 
     function generateSpreadsheet(columns, rows){
       createSpreadsheet(columns, rows);
